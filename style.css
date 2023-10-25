@@ -1,0 +1,21 @@
+header{
+    background-image: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.7)
+    ),url("https://static.tildacdn.com/2a722522-7dc0-47a4-be92-b2083de0911f/2.jpg");
+    height: 1080px;
+    width: 100%;
+    background-size: 100%;
+}
+.header__content{
+    /* text-align: center;
+    position:absolute;
+    top:50%; */
+    margin: 0 auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+   }
