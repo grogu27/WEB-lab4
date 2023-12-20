@@ -9,27 +9,35 @@ body {
     overflow-x: hidden;
 }
 
-header{
-    background-image: linear-gradient(
-        to bottom,
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-    ),url("https://static.tildacdn.com/2a722522-7dc0-47a4-be92-b2083de0911f/2.jpg");
+header {
+    position: relative;
     height: 1080px;
     width: 100%;
-    background-size: 100%;
-    background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-family: Arial, sans-serif;
-    
+    background-color: rgba(0, 0, 0, 0.7); 
 }
-.header__content{
-    position: relative;
+
+.header__background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header__background img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Растягивает изображение, чтобы оно заполнило контейнер */
+}
+
+.header__content {
+    z-index: 1; /* Разместить контент над фоновым изображением */
+    /* Ваши стили для контента */
     text-align: center;
-    top: 60px;
 }
 .header__btn{
     background-color: #b81a1a;
