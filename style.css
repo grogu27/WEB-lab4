@@ -31,12 +31,12 @@ header {
 .header__background img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Растягивает изображение, чтобы оно заполнило контейнер */
+    object-fit: cover; 
 }
 
 .header__content {
-    z-index: 1; /* Разместить контент над фоновым изображением */
-    /* Ваши стили для контента */
+    z-index: 1; 
+    
     text-align: center;
 }
 .header__btn{
@@ -116,7 +116,6 @@ header {
     left: 28px;
 }
 .line__title{
-    /* max-width: 320px; */
     padding: 10px 0 10px 0;
     font-size: 12px;
     text-align: center;
@@ -505,9 +504,9 @@ footer{
 }
 
 @media (max-width: 800px) {
-    .line__col{
+    /* .line__col{
         width: 25%;
-    }
+    } */
  
     .container{
         max-width: 800px;
@@ -537,21 +536,60 @@ footer{
     .line2__title{
         font-size: 36px;
     }
+    .line__container {
+        display: flex;
+        flex-direction: column; /* Столбцы остаются в строку */
+        gap: 20px;
+        align-items: center;
+        justify-content: center; /* Центрируем по горизонтали */
+    }
+    .line__title {
+        margin-top: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+    .line__text {
+        margin-top: 10px;
+        max-width: 320px;
+        font-size: 16px;
+        text-align: center;
+    }
+    .line__img {
+        width: 20%;
+        height: auto;
+    }
+    .line__col {
+        display: flex;
+        flex-direction: column; /* Изменили направление на вертикальное */
+        align-items: center;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        text-align: center;
+        width: 100%;
+        height: 400px; /* Задаем фиксированную высоту */
+    }
+    .line__text {
+        margin-top: 10px;
+        max-width: 90%; 
+        font-size: 16px;
+        text-align: center;
+        
+    }
   
 }
 @media (max-width: 560px) {
-    .line__col{
+    /* .line__col{
         width: 25%;
-    }
-    .line__text{
+    } */
+    /* .line__text{
         font-size: 15px;
-    }
+    } */
     .container{
         max-width: 500px;
        }
-    .line__title{
+    /* .line__title{
         font-size: 10px;
-    }
+    } */
     .map__content{
         width: 100%; 
     }
@@ -585,9 +623,9 @@ footer{
     .circle-container{
         padding: 20px;
     }
-   
-
-  
+    .header__title2{
+        font-size: 16px;
+    }
 }
 @media (max-width: 1400px) {
      .map__container {

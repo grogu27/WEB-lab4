@@ -24,7 +24,7 @@ function prevReview() {
 document.querySelector('.right').addEventListener('click', nextReview);
 document.querySelector('.left').addEventListener('click', prevReview);
 
-// Переключение слайдов при нажатии на круги
+// круги
 circles.forEach((circle, index) => {
     circle.addEventListener('click', () => {
         currentIndex = index;
@@ -45,31 +45,31 @@ document.addEventListener('DOMContentLoaded', function() {
     form.addEventListener('submit', function(event) {
         event.preventDefault();
         
-        // Получение значений полей формы
+        // Получение значений 
         const email = document.getElementById('email').value;
         const name = document.getElementById('name').value;
         const phone = document.getElementById('phone').value;
         const comment = document.getElementById('comment').value;
 
-        // Простая валидация почты
+        
         if (!validateEmail(email)) {
             alert('Пожалуйста, введите корректный адрес электронной почты.');
             return;
         }
 
-        // Простая валидация имени (не пустое поле)
+        
         if (name.trim() === '') {
             alert('Пожалуйста, введите ваше имя.');
             return;
         }
 
-        // Простая валидация номера телефона
+        
         if (!validatePhoneNumber(phone)) {
             alert('Пожалуйста, введите корректный номер телефона.');
             return;
         }
 
-        // Простая валидация комментария (не пустое поле)
+        
         if (comment.trim() === '') {
             alert('Пожалуйста, введите комментарий.');
             return;
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function() {
         document.getElementById('phone').value = '';
         document.getElementById('comment').value = '';
 
-        // Уведомление об успешной регистрации
+        
         alert('Спасибо! Ваша заявка успешно отправлена.');
     });
 
